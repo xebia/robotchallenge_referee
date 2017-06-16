@@ -1,0 +1,49 @@
+{
+  "name": "robotreferee",
+  "version": "0.0.1",
+  "description": "The robot challenge, Who will build the fastest purple bot?!",
+  "main": "index.html",
+  "scripts": {
+    "unit-test": "mocha",
+    "acceptance-test": "cucumber-js",
+    "test": "npm run unit-test && npm run acceptance-test",
+    "start-nwjs": "./nwjs-sdk-v0.23.1-osx-x64/nwjs.app/Contents/MacOS/nwjs .",
+    "start": "node app.js",
+    "robot-mac": "node src/app.js /dev/tty.Makeblock-ELETSPP"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xebia/TestMasterBot.git"
+  },
+  "keywords": [
+    "Mbot",
+    "TestMaster",
+    "RobotChallenge",
+    "Xebia"
+  ],
+  "author": "Fin Kingma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xebia/TestMasterBot/issues"
+  },
+  "homepage": "https://github.com/xebia/TestMasterBot#readme",
+  "dependencies": {
+    "bluebird": "^3.3.5",
+    "codacy-coverage": "^2.0.0",
+    "johnny-five": "^0.9.43"
+  },
+  "devDependencies": {
+    "jsdom": "^11.0.0",
+    "mocha-jsdom": "^1.1.0",
+    "nwjs": "^1.4.3",
+    "nwjs-j5-fix": "^1.0.3",
+    "request": "^2.74.0",
+    "sinon": "^1.17.5"
+  },
+  "window": {
+    "show": true,
+    "frame": true,
+    "toolbar": false,
+    "fullscreen": true
+  }
+}
