@@ -2,14 +2,10 @@
   "name": "robotreferee",
   "version": "0.0.1",
   "description": "The robot challenge, Who will build the fastest purple bot?!",
-  "main": "index.html",
+  "main": "app.js",
   "scripts": {
-    "unit-test": "mocha",
     "acceptance-test": "cucumber-js",
-    "test": "npm run unit-test && npm run acceptance-test",
-    "start-nwjs": "./nwjs-sdk-v0.23.1-osx-x64/nwjs.app/Contents/MacOS/nwjs .",
-    "start": "node app.js",
-    "robot-mac": "node src/app.js /dev/tty.Makeblock-ELETSPP"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -33,17 +29,10 @@
     "johnny-five": "^0.9.43"
   },
   "devDependencies": {
-    "jsdom": "^11.0.0",
-    "mocha-jsdom": "^1.1.0",
-    "nwjs": "^1.4.3",
-    "nwjs-j5-fix": "^1.0.3",
+    "chai": "^3.5.0",
+    "cucumber": "^0.10.2",
     "request": "^2.74.0",
-    "sinon": "^1.17.5"
-  },
-  "window": {
-    "show": true,
-    "frame": true,
-    "toolbar": false,
-    "fullscreen": true
+    "sinon": "^1.17.5",
+    "mock-firmata": "0.0.7"
   }
 }

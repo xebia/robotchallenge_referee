@@ -11,6 +11,7 @@ function RobotReferee(board) {
     this.raceTimer = undefined;
     this.seconds = 0;
     this.startTime;
+    this.specificTime;
     var robotReferee = this;
 
     this.start_sensor.on("change", function() {
@@ -80,13 +81,14 @@ function RobotReferee(board) {
 
         var secondsWithFrontNull = (secondsFloored - (minutes * 60)) < 10 ? '0' + (secondsFloored - (minutes * 60)) :
             (secondsFloored - (minutes * 60));
-        var time = minutes + ':' + secondsWithFrontNull;
         var miniseconds =   
             !miniseconds? ':000' :
             miniseconds < 10? ':00' + miniseconds :
             miniseconds < 100? ':0' + miniseconds :
             ':' + miniseconds ;
-        console.log(time + miniseconds);
+
+        this.specificTime = minutes + ':' + secondsWithFrontNull + miniseconds
+        console.log(this.specificTime);
     }
 }
 

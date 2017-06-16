@@ -45,10 +45,7 @@ module.exports = function() {
     done();
   });
   this.Then(/^I know the robot took (\d+):(\d+) and (\d+) miliseconds$/, function (minutes, seconds, miliseconds, done) {
-    console.log('timetext: ' + this.RobotReferee.timeElement.innerHTML);
-    console.log('militext: ' + this.RobotReferee.miniElement.innerHTML);
-    assert.equal(this.RobotReferee.timeElement.innerHTML, minutes + ':' + seconds, 'shown time does not match expected time');
-    assert.equal(this.RobotReferee.miniElement.innerHTML, ':' + miliseconds, 'shown miliseconds does not match expected time');
+    assert.equal(this.RobotReferee.specificTime, minutes + ':' + seconds + ':' + miliseconds, 'shown time does not match expected time');
     done();
   });
 }
